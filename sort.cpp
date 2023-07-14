@@ -13,7 +13,7 @@
 #include "main.h"
 
 
-//FUNKCE JDE PO JEDNOTLIVYCH ZNACICH ZADANEHO VYRAZU A POROVNAVA JEJ S NAZVY RESTAURACI, SHODNE VYSLEDKY ZOBRAZI.
+
 void rest_name_search(rest**head,rest*curr){
 	printf("zadejte nazev hledane restaurace:");
 	char  search_nazev[SNAME];
@@ -63,7 +63,7 @@ void rest_name_search(rest**head,rest*curr){
 	}
 }
 
-//FUNKCE VYHLEDA PRISLUSNOU RESTAURACI NA ZAKLADE ZADANEHO ID A VRACI POINTER NA NI 
+
 rest* rest_id_search(rest*head,rest*curr)
 {
 	int  search_id = 0;
@@ -78,7 +78,7 @@ rest* rest_id_search(rest*head,rest*curr)
 	return curr;
 }
 
-//FUNKCE ZOBRAZUJE RESTAURACE SERAZENE DLE ID
+
 void sort_id(rest**head,rest*curr) 
 {
 	print_cara();
@@ -98,7 +98,6 @@ int rest_countf(rest*head,rest*curr)
 	}
 	return r_count;
 }
-//FUNKCE RADI RESTAURACE DLE ABECEDY, NEJPRVE ULOZI POINTERY NA JEDNOTLIVE RESTAURACE DO ARRAY A NASLEDNE JE BUBBLE SORTEM POROVNAVA A PREHAZUJE.
 void sort_abc(rest**head,rest*curr)
 {
 	
@@ -132,7 +131,6 @@ void sort_abc(rest**head,rest*curr)
 	}
 	rest_detail(head,(rest_id_search(*head, curr)));
 }
-//FUNKCE RADI RESTAURACE DLE HODNOCENI, NEJPRVE ULOZI POINTERY NA JEDNOTLIVE RESTAURACE DO ARRAY A NASLEDNE JE BUBBLE SORTEM POROVNAVA A PREHAZUJE.
 void sort_hodn(rest**head,rest*curr)
 {
 	int rest_count = rest_countf(*head,curr);
